@@ -4,76 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <title>Psychic-game</title>
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> 
+  <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
 <body>
     <div class="jumbotron">
-        <div class = "p-3 mb2 bg-info text-white"><h1>The Psychic Game</h1></div>
+       <h1>The Psychic Game</h1>
         <div>
-            <p id="directions-text">Guess what letter I am thinking of.  You have 5 tries.</p>
+            <p id="directions-text">Guess what letter I am thinking of.  You have 10 tries.</p>
             <p id="userchoice-text"></p>
             <p id="computerchoice-text"></p>
             <p id="guesses-text"></p>
             <p id="wins-text"></p>
             <p id="losses-text"></p>
         </div>
-
-    <script type="text/javascript">
-
-    // Creates an array that lists out all of the options (Alphabet).
-        var computerChoices = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-        var wins=0;
-        var losses=0;
-        var wrong=10;
-
-        var directionsText = document.getElementById("directions-text");
-        var userChoiceText = document.getElementById("userchoice-text");
-        var computerChoiceText = document.getElementById("computerchoice-text");
-        var winsText = document.getElementById("wins-text");
-        var lossesText = document.getElementById("losses-text");
-        var guessesLeft=document.getElementById("guesses-text");
-
-
-    // This function is run whenever the user presses a key.
-        document.onkeyup = function(event) {
-
-      // Determines which key was pressed.
-        var userGuess = event.key;
-
-      // Randomly chooses a choice from the options array. This is the Computer's guess.
-        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)]
-      
-        if (userGuess===computerGuess) {
-          win++;
-        }
-
-            else if (userGuess!=computerGuess) {
-            wrong--;
-            }
-        
-        if (wrong===0) {
-            losses++;
-            wrong=10;
-            
-            alert("Try again?");
-                
-        }
-
-            directionsText.textContent="";
-
-            userChoiceText.textContent="You choose - " + userGuess;
-            computerChoiceText.textContent="Computer chooses - " + computerGuess;
-            guessesLeft.textContent= wrong +" guesses left."
-            winsText.textContent="Wins = " + wins;
-            lossesText.textContent="Losses = " + losses;
-        }
-        
-  </script>
-  </div>
-
+     </div>
+     <script src = "assets/javascript/game.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,24 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../images/tarot.jpg);  
+}
+
+
+
+h1 {
+    background-color: purple;
+    color:gold;
+    text-align: center;
+    padding: 40px;
+    border: 5px solid;
+    border-radius: 25px;
+}
+
+p {
+    color: gold;
+    text-align: center;
+
+}
